@@ -1,0 +1,6 @@
+button.specialButton{
+    background-color: var(--SecondaryColor);
+    padding: 12px 20px;
+    border: none;
+    color: white;
+}

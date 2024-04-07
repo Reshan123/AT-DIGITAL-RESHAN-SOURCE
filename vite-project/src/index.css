@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root{
+  --PrimaryColor: #6B3CC9;
+  --SecondaryColor: #F28D35;
+  --AnalogusColor1: #6A44F2;
+  --AnalogusColor2: #1CBDDD;
+  --TriadicColor: #52378C;
+  --DarkColor: #78BF91;
+  --TextColor: #2F2F2F;
+  --TextColorLight: #9C9991;
+  --TextColorSubtle: #9C9991;
+  --AccentColor: #E2F2FE;
+  --AccentColorLight: #E2F2FE;
+  --ErrorColor: #FF0335;
+  --SuccessColor: #5EB30B;
+}
+
+a{
+    text-decoration: none;
+}

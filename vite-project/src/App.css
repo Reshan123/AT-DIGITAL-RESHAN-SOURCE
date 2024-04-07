@@ -1,0 +1,187 @@
+header{
+    background: url('./Images/hero.png') no-repeat;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+}
+
+header .heroTextContainer{
+    position: absolute;
+    top: 354px;
+    left: 80px;
+    width: 630px;
+    height: 306px;
+    padding: 24px 40px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateY(-10%);
+    background: linear-gradient(to right, var(--DarkColor),var(--AnalogusColor2));
+}
+
+header .heroTextContainer .heroText{
+    overflow: hidden;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    color: white;
+    /* letter-spacing: -2px; */
+}
+
+header .heroTextContainer button{
+    align-self: flex-start;
+}
+
+.heroTextContainer{
+    display: none;
+}
+
+.middleContentSection{
+    margin: 80px 188px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+}
+
+.middleContentSection .middleContentSectionImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleContentSection .middleContentSectionTextContainer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.middleContentSection .middleContentSectionTextContainer .middleContentSectionTextContainerTitle{
+    /* align-self: flex-start; */
+    font-size: 27px;
+    color: var(--PrimaryColor);
+    font-weight: 600;
+}
+
+.middleContentSection .middleContentSectionTextContainer button{
+    width: 23%;
+}
+
+
+.FAQContentContainer{
+    margin: 80px 297px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.FAQContentContainer .FAQContentContainerTitle{
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--PrimaryColor);
+}
+
+.FAQContentContainer .FAQListContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    header .heroTextContainer{
+        width: 622px;
+        left: 60px;
+    }
+    .middleContentSection{
+        margin: 80px 152px;
+    }
+    
+    .middleContentSection .middleContentSectionTextContainer button{
+        width: 30%;
+    }
+
+    .FAQContentContainer{
+        margin: 80px 152px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 448px;
+    }
+    header .heroTextContainer{
+        display: none;
+    }
+    .heroTextContainer{
+        padding: 24px 40px 32px 40px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: translateY(-10%);
+        background: linear-gradient(to right, var(--DarkColor),var(--AnalogusColor2));
+    }
+    .heroTextContainer .heroText{
+        overflow: hidden;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 700;
+        color: white;
+    }
+    .heroTextContainer button{
+        align-self: flex-start;
+    }
+    .middleContentSection{
+        margin: 40px 60px;
+    }
+    .middleContentSection .middleContentSectionTextContainer button{
+        width: 40%;
+    }
+
+    .FAQContentContainer{
+        margin: 40px 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    header{
+        height: 218px;
+    }
+
+    .heroTextContainer{
+        padding: 24px 20px 32px 20px;
+    }
+
+    .heroTextContainer .heroText{
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .middleContentSection{
+        margin: 60px 20px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .middleContentSection.revserseFlow .middleContentSectionImage{
+        grid-row: 1;
+    }
+
+    .middleContentSection .middleContentSectionTextContainer{
+        align-items: center;
+    }
+    
+    .FAQContentContainer{
+        margin: 60px 20px;
+    }
+
+    .FAQContentContainer .FAQContentContainerTitle{
+        text-align: center;
+    }
+}

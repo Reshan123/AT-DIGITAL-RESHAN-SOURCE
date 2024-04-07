@@ -1,0 +1,118 @@
+nav{
+    z-index: 900;
+    background-color: var(--PrimaryColor);
+    width: 100vw;
+    height: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    position: sticky;
+    top: 0;
+}
+
+nav .navBarLinkContainer{
+    display: flex;
+    gap: 28px;
+}
+
+nav .navBarLinkContainer .navBarLink.hiddenForLargeViews{
+    display: none;
+}
+
+nav .navBarLinkContainer .navBarLink a{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav .hamburgerNavBar{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        padding: 26px 20px 26px 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    nav .navBarLogo img{
+        height: 25px;
+    }
+
+    nav .navBarLinkContainer .navBarLink.hiddenForLargeViews{
+        display: block;
+    }
+
+    nav .navBarLinkContainer{
+        z-index: 995;
+        display: block;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .5s ease, visibility .7s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 26px 20px 26px 20px;
+    }
+
+    nav .navBarLinkContainer .navBarLink a{
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    nav .hamburgerNavBar.open + .navBarLinkContainer{
+        visibility: visible;
+        opacity: 1;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    nav .hamburgerNavBar{
+        z-index: 999;
+        display: block;
+        position: sticky;
+        right: 20px;
+    }
+
+    nav .hamburgerNavBar .hamburgerNavBarIcon{
+        width: 31px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    nav .hamburgerNavBar .hamburgerNavBarIcon div{
+        border-bottom: 4px solid rgb(255, 255, 255);
+        box-shadow: 0 0 3px #4a4a4a, 0 0 3px #4a4a4a;
+        border-radius: 9px;
+        transition: transform 1s ease, rotate 1s ease, opacity 1s ease;
+    }
+
+    nav .hamburgerNavBar.open .hamburgerNavBarIcon div{
+        border-color: black;
+        transition: border-color .5s ease, transform 1s ease, rotate 1s ease, opacity .5s .3s ease, box-shadow 1s ease;
+        box-shadow: none;
+    }
+    
+    nav .hamburgerNavBar.open .hamburgerNavBarIcon div:nth-child(1){
+        transform: translate( 0, 10px) rotate(405deg);
+    }
+    
+    nav .hamburgerNavBar.open .hamburgerNavBarIcon div:nth-child(2){
+        opacity: 0;
+    }
+    nav .hamburgerNavBar.open .hamburgerNavBarIcon div:nth-child(3){
+        transform: translate( 0, -10px) rotate(-405deg);
+    }
+
+}

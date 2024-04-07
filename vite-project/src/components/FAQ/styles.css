@@ -1,0 +1,62 @@
+.FAQContainer{
+    width: 100%;
+    padding: 15px 35px;
+    background-color: var(--AccentColorLight);
+}
+
+.FAQContainer .FAQCard{
+    position: relative;
+
+}
+
+.FAQContainer .FAQCard input{
+    display: none;
+}
+
+.FAQContainer .FAQCard label{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.FAQContainer .FAQCard label::after{
+    content: " +";
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.FAQContainer .FAQCard input:checked + label{
+    color: var(--PrimaryColor);
+}
+
+.FAQContainer .FAQCard input:checked + label::after{
+    content: "-";
+}
+
+.FAQContainer .FAQCard .FAQCardBody{
+
+    color: var(--TextColorLight);
+    font-size: 18px;
+    width: 85%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding .25s;
+
+}
+
+.FAQContainer .FAQCard input:checked + label + .FAQCardBody{
+    max-height: 400px;
+    padding: 10px 0px;
+}
+
+@media screen and (max-width: 375px) {
+    .FAQContainer{
+        padding: 15px;
+    }
+    .FAQContainer .FAQCard label{
+        font-size: 20px;
+    }
+    .FAQContainer .FAQCard .FAQCardBody{
+        font-size: 16px;
+    }
+}
